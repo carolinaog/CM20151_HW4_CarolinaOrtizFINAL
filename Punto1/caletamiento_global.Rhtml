@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<title>Esta ocurriendo el Calentamiento Global?</title>
+</head>
+
+<body>
+
+<p>Documento HTML creado en R. Para visualizarlo, correr primero los metodos 1,1 y 1,2 para tener acceso a las graficas guardadas en el directorio de trabajo </p>
+
+<!--begin.rcode
+library(png)
+
+#Lee la imagen generada en el punto 1.1
+img <- readPNG('plot.png')
+grid::grid.raster(img)
+
+
+end.rcode-->
+
+<p>You can also embed plots, for example:</p>
+
+<!--begin.rcode 
+#De existir un calentamiento global, se ha visto már reflejado en las ciudades de clima frío como Ipiales y Bogotá, pues asi como se ve en las interpolaciones generadas por el método 1.2, en donde se muestra que por ejemplo para ciudades como Ipiales hasta el año 1986 existían temperaturas
+#debajo de los 9 grados y no mayores de 12.4 grados , mientras que luego de este año, se han sobrepasado los 13 grados, y ya no se presentan temperaturas mas bajas de 9 grados.
+
+
+img <- readPNG('Ipiales_interpolaciones.png')
+grid::grid.raster(img)
+end.rcode-->
+
+<!--begin.rcode 
+#En el caso de Bogotá, los datos recolectados muestran que las temperaturas cercanas a los doce grados, dejaron de manifestarse en la ciudad, dandose
+#desde el año 2004, temperaturas entre 13 y 14 grados.
+
+img <- readPNG('Bucaramanga_interpolaciones.png')
+grid::grid.raster(img)
+
+end.rcode-->
+
+<!--begin.rcode 
+#Las ciudades mas cálidas reflejan menos los efectos de un calentamiento global. En ciudades como Barranquilla, los maximos de calor en los distintos periodos de tiempo, separados por cerca de veinte anhos,
+#han mantenido la cercaní a los 29 grados. Sin emabrgo desde el 2002 no se presenta un minimo en emperatura tan cercano a los 25.5 grados, como si se habría presentado en el pasado.
+
+img <- readPNG('Bquilla_interpolaciones.png')
+grid::grid.raster(img)
+
+end.rcode-->
+
+<!--begin.rcode 
+# se podría tambien decir que observando los datos de Bucaramanga y de Cali, el calentamiento global no se hace evidente, pues la temperatura pareciese comportarse en el mismo rango de valores. El promedio en temperaturas pareciese
+#estar siguiendo la misma linea, y no parecen ahber grandes diferencias entre maximo y minimos
+
+#Bucaramanga
+img <- readPNG('Bucaramanga_interpolaciones.png')
+grid::grid.raster(img)
+end.rcode-->
+
+<!--begin.rcode 
+#Cali
+img <- readPNG('Cali_interpolaciones.png')
+grid::grid.raster(img)
+
+
+#conclusiones:
+#Se puede observar efectos claros de calentamiento de la tempratura atmosférica solo en las ciudades de bajas emperaturas. Esto hace pensar que posiblemente hayan factores acrecentando un efecto de "islas de calor", en donde el
+#calor se concentra en un área específica. La urbanización es una de sus causas. Sin embargo, las ciudades de clima cálido tambien están siendo afectadas por la ubanización, sin emabrgo pueden presentar caracteríticas geográficas que mitiguen los cambios drásticos; corrientes de aire desde las cordilleras, o venidas desde el mar, por ejemplo.
+
+end.rcode-->
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<html>
+
+<head>
+<style type="text/css">
+.knitr.inline {
+  background-color: #f7f7f7;
+  border:solid 1px #B0B0B0;
+}
+.error {
+	font-weight: bold;
+	color: #FF0000;
+},
+.warning {
+	font-weight: bold;
+}
+.message {
+	font-style: italic;
+}
+.source, .output, .warning, .error, .message {
+	padding: 0em 1em;
+  border:solid 1px #F7F7F7;
+}
+.source {
+  background-color: #f5f5f5;
+}
+.rimage.left {
+  text-align: left;
+}
+.rimage.right {
+  text-align: right;
+}
+.rimage.center {
+  text-align: center;
+}
+.hl.num {
+  color: #AF0F91;
+}
+.hl.str {
+  color: #317ECC;
+}
+.hl.com {
+  color: #AD95AF;
+  font-style: italic;
+}
+.hl.opt {
+  color: #000000;
+}
+.hl.std {
+  color: #585858;
+}
+.hl.kwa {
+  color: #295F94;
+  font-weight: bold;
+}
+.hl.kwb {
+  color: #B05A65;
+}
+.hl.kwc {
+  color: #55aa55;
+}
+.hl.kwd {
+  color: #BC5A65;
+  font-weight: bold;
+}
+</style>
+<title>Esta ocurriendo el Calentamiento Global?</title>
+</head>
+
+<body>
+
+<p>Documento HTML creado en R. Para visualizarlo, correr primero los metodos 1,1 y 1,2 para tener acceso a las graficas guardadas en /Home</p>
+
+<div class="chunk" id="unnamed-chunk-1"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">library</span><span class="hl std">(png)</span>
+
+<span class="hl com">#Lee la imagen generada en el punto 1.1</span>
+<span class="hl std">img</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">readPNG</span><span class="hl std">(</span><span class="hl str">'plot.png'</span><span class="hl std">)</span>
+<span class="hl std">grid</span><span class="hl opt">::</span><span class="hl kwd">grid.raster</span><span class="hl std">(img)</span>
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" class="plot" /></div></div>
+
+<p>You can also embed plots, for example:</p>
+
+<div class="chunk" id="unnamed-chunk-2"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl com">#De existir un calentamiento global, se ha visto már reflejado en las ciudades de clima frío como Ipiales y Bogotá, pues asi como se ve en las interpolaciones generadas por el método 1.2, en donde se muestra que por ejemplo para ciudades como Ipiales hasta el año 1986 existían temperaturas</span>
+<span class="hl com">#debajo de los 9 grados y no mayores de 12.4 grados , mientras que luego de este año, se han sobrepasado los 13 grados, y ya no se presentan temperaturas mas bajas de 9 grados.</span>
+
+
+<span class="hl std">img</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">readPNG</span><span class="hl std">(</span><span class="hl str">'Ipiales_interpolaciones.png'</span><span class="hl std">)</span>
+<span class="hl std">grid</span><span class="hl opt">::</span><span class="hl kwd">grid.raster</span><span class="hl std">(img)</span>
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" class="plot" /></div></div>
+
+<div class="chunk" id="unnamed-chunk-3"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl com">#En el caso de Bogotá, los datos recolectados muestran que las temperaturas cercanas a los doce grados, dejaron de manifestarse en la ciudad, dandose</span>
+<span class="hl com">#desde el año 2004, temperaturas entre 13 y 14 grados.</span>
+
+<span class="hl std">img</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">readPNG</span><span class="hl std">(</span><span class="hl str">'Bucaramanga_interpolaciones.png'</span><span class="hl std">)</span>
+<span class="hl std">grid</span><span class="hl opt">::</span><span class="hl kwd">grid.raster</span><span class="hl std">(img)</span>
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" class="plot" /></div></div>
+
+<div class="chunk" id="unnamed-chunk-4"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl com">#Las ciudades mas cálidas reflejan menos los efectos de un calentamiento global. En ciudades como Barranquilla, los maximos de calor en los distintos periodos de tiempo, separados por cerca de veinte anhos,</span>
+<span class="hl com">#han mantenido la cercaní a los 29 grados. Sin emabrgo desde el 2002 no se presenta un minimo en emperatura tan cercano a los 25.5 grados, como si se habría presentado en el pasado.</span>
+
+<span class="hl std">img</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">readPNG</span><span class="hl std">(</span><span class="hl str">'Bquilla_interpolaciones.png'</span><span class="hl std">)</span>
+<span class="hl std">grid</span><span class="hl opt">::</span><span class="hl kwd">grid.raster</span><span class="hl std">(img)</span>
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-4-1.png" title="plot of chunk unnamed-chunk-4" alt="plot of chunk unnamed-chunk-4" class="plot" /></div></div>
+
+<div class="chunk" id="unnamed-chunk-5"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl com"># se podría tambien decir que observando los datos de Bucaramanga y de Cali, el calentamiento global no se hace evidente, pues la temperatura pareciese comportarse en el mismo rango de valores. El promedio en temperaturas pareciese</span>
+<span class="hl com">#estar siguiendo la misma linea, y no parecen ahber grandes diferencias entre maximo y minimos</span>
+
+<span class="hl com">#Bucaramanga</span>
+<span class="hl std">img</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">readPNG</span><span class="hl std">(</span><span class="hl str">'Bucaramanga_interpolaciones.png'</span><span class="hl std">)</span>
+<span class="hl std">grid</span><span class="hl opt">::</span><span class="hl kwd">grid.raster</span><span class="hl std">(img)</span>
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-5-1.png" title="plot of chunk unnamed-chunk-5" alt="plot of chunk unnamed-chunk-5" class="plot" /></div></div>
+
+<div class="chunk" id="unnamed-chunk-6"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl com">#Cali</span>
+<span class="hl std">img</span> <span class="hl kwb">&lt;-</span> <span class="hl kwd">readPNG</span><span class="hl std">(</span><span class="hl str">'Cali_interpolaciones.png'</span><span class="hl std">)</span>
+<span class="hl std">grid</span><span class="hl opt">::</span><span class="hl kwd">grid.raster</span><span class="hl std">(img)</span>
+</pre></div>
+</div><div class="rimage default"><img src="figure/unnamed-chunk-6-1.png" title="plot of chunk unnamed-chunk-6" alt="plot of chunk unnamed-chunk-6" class="plot" /></div><div class="rcode">
+<div class="source"><pre class="knitr r"><span class="hl com">#conclusiones:</span>
+<span class="hl com">#Se puede observar efectos claros de calentamiento de la tempratura atmosférica solo en las ciudades de bajas emperaturas. Esto hace pensar que posiblemente hayan factores acrecentando un efecto de &quot;islas de calor&quot;, en donde el</span>
+<span class="hl com">#calor se concentra en un área específica. La urbanización es una de sus causas. Sin embargo, las ciudades de clima cálido tambien están siendo afectadas por la ubanización, sin emabrgo pueden presentar caracteríticas geográficas que mitiguen los cambios drásticos; corrientes de aire desde las cordilleras, o venidas desde el mar, por ejemplo.</span>
+</pre></div>
+</div></div>
+
+</body>
+</html>

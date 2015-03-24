@@ -1,0 +1,16 @@
+# coding: utf-8
+
+# In[7]:
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+# In[9]:
+
+#**BOGOTA**
+#NOTA= Lee los archivo de temperaturas creados en R con el codigo "temperaturas.r", guardados en /Home.Crea un Data Frame (df) con la librería Pandas 
+#con fechas y temperaturas para cada ciudad
+df= pd.read_table("bogota2.txt")
+df = df[['temperature','date']]
